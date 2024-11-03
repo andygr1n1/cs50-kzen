@@ -1,0 +1,18 @@
+version: '3.8'
+networks:
+    gold-timer-network:
+        name: gold-timer-network
+services:
+    gold-timer:
+        container_name: gold-timer-container
+        build: .
+        ports:
+            - '9997:9997'
+        environment:
+            # - VITE_PORT=9997
+            # - VITE_CLIENT_ENDPOINT=
+            # - VITE_X_HASURA_ADMIN_SECRET=
+            # - VITE_FIRE_BUNNY_STORAGE=
+        networks:
+            - gold-timer-network
+        restart: unless-stopped

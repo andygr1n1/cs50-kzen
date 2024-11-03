@@ -1,0 +1,132 @@
+.ant-collapse-expand-icon {
+    @apply !text-cText;
+}
+
+.ant-segmented-group {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-collapse-borderless > .ant-collapse-item {
+    /* border-bottom: 1px solid rgba(63, 63, 63, 0.304); */
+    /* @apply border border-b-cText; */
+    @apply border border-b-transparent;
+}
+
+.form-field-email .ant-col.ant-form-item-label {
+    @apply mr-8;
+}
+
+/* Profile DatePicker */
+div.profile-date-picker div.ant-picker-disabled {
+    @apply !cursor-default;
+}
+
+div.profile-date-picker div.ant-picker-disabled .ant-picker-input > input[disabled] {
+    @apply text-gray-700 disabled:!cursor-default;
+}
+
+div.profile-date-picker div.ant-picker input {
+    @apply !text-sm;
+}
+/* Profile DatePicker */
+
+.ant-slider-step {
+    @apply !rounded-full !bg-blue-300;
+}
+
+.ant-btn:disabled {
+    @apply cursor-not-allowed bg-gray-300;
+}
+
+.ant-collapse-content-box {
+    @apply bg-global-2-bg;
+}
+
+.ant-picker-disabled {
+    @apply !text-cText !rounded-md !bg-gray-50 [&_*]:!text-gray-400;
+}
+
+.ant-notification {
+    @apply z-[99999999];
+}
+
+/* ant-picker */
+.ant-picker {
+    @apply !bg-global-3-bg [&_*]:bg-global-3-bg [&_*]:!text-cText !border-global-2-bg !rounded-md;
+}
+
+.ant-picker-dropdown {
+    @apply bg-global-3-bg [&_*]:bg-global-3-bg;
+}
+
+.ant-picker-content thead tr,
+.ant-picker-header {
+    @apply !text-cText  [&_*]:!text-gray-500;
+}
+
+.ant-picker-cell.ant-picker-cell-end {
+    @apply !text-blue-500 [&_*]:!text-blue-500;
+}
+
+td.ant-picker-cell.ant-picker-cell-disabled {
+    @apply !text-gray-400 [&_*]:!text-gray-400;
+}
+
+.ant-picker-cell-disabled {
+    @apply !text-gray-500 [&_*]:!text-gray-400;
+}
+
+.ant-picker-cell {
+    @apply !text-cText;
+}
+
+.ant-picker-time-panel-cell.ant-picker-time-panel-cell-selected {
+    @apply rounded-md !bg-blue-500 [&_*]:!bg-blue-500;
+}
+
+.ant-picker-footer {
+    @apply bg-transparent [&_*]:!bg-transparent;
+}
+
+.ant-picker-footer .ant-btn-primary {
+    @apply hover:text-blue-500 disabled:border-none;
+}
+
+.ant-picker-content,
+.ant-picker-footer {
+    @apply text-cText [&_*]:!text-cText;
+}
+
+.ant-picker-ok button {
+    @apply !bg-blue-500 disabled:!bg-gray-400;
+}
+
+.ant-popover-arrow {
+    @apply !hidden;
+}
+
+/* tabs */
+.ant-tabs-nav-operations,
+.ant-tabs-nav-wrap {
+    @apply !border-transparent !bg-transparent !shadow-none;
+}
+
+.ant-notification-notice-wrapper {
+    @apply !bg-transparent;
+}
+
+.ant-notification-notice {
+    @apply bg-global-bg-regal text-cText [&_div>*]:text-cText rounded-md;
+}
+
+.ant-notification-notice-close-x {
+    @apply text-cText opacity-70;
+}
+
+.rc-virtual-list-scrollbar-thumb {
+    @apply !bg-blue-500/50;
+}

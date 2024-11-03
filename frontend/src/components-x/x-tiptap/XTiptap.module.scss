@@ -1,0 +1,25 @@
+.xtiptap {
+    @apply text-lg md:text-base flex flex-col w-full;
+
+    img {
+        @apply max-w-full;
+    }
+
+    & > div:nth-child(2) {
+        @apply overflow-auto flex flex-col h-full scrollbar-thumb-blue-500/10 scrollbar-track-transparent scrollbar-thin
+        focus-within:border-blue-600 rounded-[6px] border-solid border-[1px]
+        border-blue-900 hover:border-blue-600 px-2;
+    }
+
+    &.xtiptap-readonly {
+        & > div:nth-child(2) {
+            @apply px-0 border-none;
+        }
+    }
+
+    &.xtiptap-error {
+        & > div:nth-child(2) {
+            @apply border-red-500;
+        }
+    }
+}

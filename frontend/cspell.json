@@ -1,0 +1,29 @@
+{
+    "version": "0.2",
+    "language": "en, ru",
+    "words": [
+        "achs",
+        "allselect",
+        "callout",
+        "Colocated",
+        "contenteditable",
+        "Formik",
+        "Hyperlegible",
+        "noselect",
+        "prosemirror",
+        "slnt",
+        "tada",
+        "Tiptap",
+        "uidotdev",
+        "urql",
+        "usehooks",
+        "webp",
+        "xtiptap",
+        "Zeplin",
+        "Патронус"
+    ],
+    "ignorePaths": [],
+    "ignoreRegExpList": [
+        "enum.*"
+    ]
+}
