@@ -1,9 +1,9 @@
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 
 export const SubmitButton = () => {
     return (
-        <StyledButton type='submit' size='small' variant={'contained'}>
+        <XButton type='submit' size='small' variant={'contained'}>
             Save
-        </StyledButton>
+        </XButton>
     )
 }

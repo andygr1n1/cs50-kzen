@@ -2,7 +2,7 @@ import { IconBold } from '@/assets/icons/IconBold'
 import { IconItalic } from '@/assets/icons/IconItalic'
 import { IconStrikeThrough } from '@/assets/icons/IconStrikeThrough'
 import { IconUnderline } from '@/assets/icons/IconUnderline'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { cn } from '@/helpers/cn'
 import { useCurrentEditor } from '@tiptap/react'
 import { BubbleMenu } from '@tiptap/react'
@@ -59,7 +59,7 @@ export const BubbleMenuExt: React.FC = () => {
                             suffixIcon={<IconChevronDown className='text-cText w-4 h-4' />}
                             rootClassName='bubble-menu-select'
                         />
-                        <StyledButton
+                        <XButton
                             variant='text'
                             size='small'
                             onClick={() => editor.chain().focus().toggleBold().run()}
@@ -70,8 +70,8 @@ export const BubbleMenuExt: React.FC = () => {
                                     'cursor-pointer hover:text-blue-500 min-h-[14px] h-[14px] w-[14px] min-w-[14px]',
                                 )}
                             />
-                        </StyledButton>
-                        <StyledButton
+                        </XButton>
+                        <XButton
                             variant='text'
                             size='small'
                             onClick={() => editor.chain().focus().toggleItalic().run()}
@@ -82,8 +82,8 @@ export const BubbleMenuExt: React.FC = () => {
                                     'cursor-pointer hover:text-blue-500 min-h-[14px] h-[14px] w-[14px] min-w-[14px]',
                                 )}
                             />
-                        </StyledButton>
-                        <StyledButton
+                        </XButton>
+                        <XButton
                             variant='text'
                             size='small'
                             onClick={() => editor.chain().focus().toggleUnderline().run()}
@@ -94,8 +94,8 @@ export const BubbleMenuExt: React.FC = () => {
                                     'cursor-pointer hover:text-blue-500 min-h-[14px] h-[14px] w-[14px] min-w-[14px]',
                                 )}
                             />
-                        </StyledButton>
-                        <StyledButton
+                        </XButton>
+                        <XButton
                             variant='text'
                             size='small'
                             onClick={() => editor.chain().focus().toggleStrike().run()}
@@ -106,7 +106,7 @@ export const BubbleMenuExt: React.FC = () => {
                                     'cursor-pointer hover:text-blue-500 min-h-[14px] h-[14px] w-[14px] min-w-[14px]',
                                 )}
                             />
-                        </StyledButton>
+                        </XButton>
 
                         <Select
                             labelRender={(data) => (
@@ -123,7 +123,7 @@ export const BubbleMenuExt: React.FC = () => {
                             suffixIcon={<IconChevronDown className='text-cText w-4 h-4' />}
                             rootClassName='bubble-menu-select'
                         />
-                        <StyledButton
+                        <XButton
                             variant='text'
                             size='small'
                             onClick={() =>
@@ -132,7 +132,7 @@ export const BubbleMenuExt: React.FC = () => {
                             className={cn('text-xs', editor.isActive('link') ? 'is-active !text-blue-500' : '')}
                         >
                             Link
-                        </StyledButton>
+                        </XButton>
                     </div>
                 </BubbleMenu>
             )}

@@ -1,4 +1,4 @@
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { type IGoalSchema, goalStatusEnum } from '@/modules/goals/shared-service/types'
 import { isCompletedGoalStatus } from '@/modules/goals/helpers/goalsGuards'
 import { useUpdateGoalStatus } from '../../../service/update-goal-status/useUpdateGoalStatus.service'
@@ -14,7 +14,7 @@ export const CompleteRitualGoal: React.FC<{ goal: IGoalSchema }> = ({ goal }) =>
 
     return (
         <>
-            <StyledButton
+            <XButton
                 id='completeRitualGoal'
                 variant={'outlined'}
                 size={'small'}

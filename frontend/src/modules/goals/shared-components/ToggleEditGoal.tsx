@@ -1,5 +1,5 @@
 import { XTooltip } from '@/components-x/x-tooltip/XTooltip'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { IconEdit } from '@/assets/icons/IconEdit'
 import { type ReactNode } from 'react'
 import { useGoalEditor$ } from '../components/goal-editor-dialog/stores/goal-editor-store/useGoalEditor.store'
@@ -10,7 +10,7 @@ export const ToggleEditGoal: React.FC<{ label?: ReactNode; goalId: string }> = (
 
     return (
         <>
-            <StyledButton
+            <XButton
                 id='editGoal'
                 variant={editMode ? 'contained' : 'text'}
                 size={'custom'}
@@ -28,7 +28,7 @@ export const ToggleEditGoal: React.FC<{ label?: ReactNode; goalId: string }> = (
                 }}
             >
                 {label}
-            </StyledButton>
+            </XButton>
             {!label && <XTooltip anchorSelect='#editGoal'>{editMode ? 'Cancel' : 'Edit'}</XTooltip>}
         </>
     )

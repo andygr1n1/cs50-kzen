@@ -1,4 +1,4 @@
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { IconHeart } from '@/assets/icons/IconHeart'
 import { useFormikContext } from 'formik'
 import { type IGoalSchema } from '@/modules/goals/shared-service'
@@ -8,7 +8,7 @@ export const ToggleFavoriteNewGoal = () => {
     const isFavorite = formikContext.values.is_favorite
     return (
         <>
-            <StyledButton
+            <XButton
                 id='toggleFavoriteGoal'
                 error={!!isFavorite}
                 variant={isFavorite ? 'contained' : 'text'}

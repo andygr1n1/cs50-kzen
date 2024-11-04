@@ -2,7 +2,7 @@
 @import './react-menu-theme-overwrite.scss';
 @import './date-picker.css';
 @import './antdRedesign.css';
-@import '../components/buttons/StyledButtonLightVariables.scss';
+@import '../components-x/x-button/XButtonVars.scss';
 @import 'react-tooltip/dist/react-tooltip.css';
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';

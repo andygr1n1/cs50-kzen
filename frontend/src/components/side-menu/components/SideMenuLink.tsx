@@ -1,4 +1,4 @@
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { APP_ROUTES_ENUM } from '@/services/enums'
 import { useSideMenu } from '@/hooks/useSideMenu.hook'
 import { observer } from 'mobx-react-lite'
@@ -36,7 +36,7 @@ export const SideMenuLink: React.FC<{
         >
             {title ? (
                 <>
-                    <StyledButton
+                    <XButton
                         variant='text'
                         size='small'
                         className='!p-0 font-bold !text-inherit duration-300 hover:!text-blue-600'
@@ -44,7 +44,7 @@ export const SideMenuLink: React.FC<{
                         startIcon={icon}
                     >
                         {title}
-                    </StyledButton>
+                    </XButton>
                 </>
             ) : (
                 <>{children}</>

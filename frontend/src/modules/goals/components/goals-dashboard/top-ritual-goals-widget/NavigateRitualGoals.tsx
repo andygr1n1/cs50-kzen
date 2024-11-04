@@ -1,5 +1,5 @@
 import { IconRitual } from '@/assets/icons/IconRitual'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { setGoalsFilterParam } from '@/modules/goals/helpers/goalsFilterParamLocalForage'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ export const NavigateRitualGoals: React.FC = () => {
 
     return (
         <div className='absolute left-[-40px] top-[-40px] cursor-pointer'>
-            <StyledButton
+            <XButton
                 onClick={() => {
                     navigate(
                         { pathname: '/goals/filtered-goals', search: `?filter=ritual` },

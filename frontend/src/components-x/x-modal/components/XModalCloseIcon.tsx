@@ -1,9 +1,9 @@
 import { IconClose } from '@/assets/icons/IconClose'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 
 export const XModalCloseIcon: React.FC<{ onCancel: () => void }> = ({ onCancel }) => {
     return (
-        <StyledButton
+        <XButton
             onClick={onCancel}
             size='small'
             variant='text'
@@ -12,6 +12,6 @@ export const XModalCloseIcon: React.FC<{ onCancel: () => void }> = ({ onCancel }
             <IconClose
                 className={`h-6 w-6 cursor-pointer text-white/70 duration-300 hover:h-8 hover:w-8 group-hover:text-blue-500`}
             />
-        </StyledButton>
+        </XButton>
     )
 }

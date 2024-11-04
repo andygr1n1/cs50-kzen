@@ -1,5 +1,5 @@
 import { IconEditProfile } from '@/assets/icons/IconEditProfile'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { cn } from '@/helpers/cn'
 import { useProfile$ } from '@/modules/profile/stores/useProfile.store'
 
@@ -8,12 +8,12 @@ export const EditProfile = () => {
 
     return (
         <div className={cn('opacity-70', !viewMode && 'opacity-100')}>
-            <StyledButton
+            <XButton
                 size='small'
                 startIcon={<IconEditProfile width={24} height={24} />}
                 onClick={openEditProfile}
                 variant={viewMode ? 'text' : 'contained'}
-            ></StyledButton>
+            ></XButton>
         </div>
     )
 }

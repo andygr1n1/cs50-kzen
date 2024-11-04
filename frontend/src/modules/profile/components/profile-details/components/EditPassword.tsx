@@ -1,5 +1,5 @@
 import { IconEditPassword } from '@/assets/icons/IconEditPassword'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useProfile$ } from '@/modules/profile/stores/useProfile.store'
 import { Suspense, lazy } from 'react'
 const ProfileNewPasswordDialog = lazy(() => import('../../profile-new-password/ProfileNewPasswordDialog'))
@@ -9,7 +9,7 @@ export const EditPassword = () => {
 
     return (
         <div className='opacity-70 absolute left-10 top-1'>
-            <StyledButton
+            <XButton
                 size='small'
                 startIcon={<IconEditPassword width={24} height={24} />}
                 onClick={openEditPassword}

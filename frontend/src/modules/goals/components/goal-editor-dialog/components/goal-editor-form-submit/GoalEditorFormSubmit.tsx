@@ -1,4 +1,4 @@
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { XTooltip } from '@/components-x/x-tooltip/XTooltip'
 import { useGoalEditorFormSubmit } from './useGoalEditorFormSubmit'
 import { IconInfiniteLoading } from '@/assets/icons/IconInfiniteLoading'
@@ -8,7 +8,7 @@ export const GoalEditorFormSubmit: React.FC = () => {
 
     return (
         <div className='relative'>
-            <StyledButton
+            <XButton
                 data-testid='submit-goal-editor-form'
                 variant='outlined'
                 type='submit'
@@ -17,7 +17,7 @@ export const GoalEditorFormSubmit: React.FC = () => {
                 className='z-10'
             >
                 {!isSubmitting ? OkText : <IconInfiniteLoading className='w-6 h-6' />}
-            </StyledButton>
+            </XButton>
             {disabled && tooltipText && (
                 <div
                     id='disabledTooltip'

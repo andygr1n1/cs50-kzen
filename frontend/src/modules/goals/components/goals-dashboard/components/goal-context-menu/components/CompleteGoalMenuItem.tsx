@@ -1,6 +1,6 @@
 import { IconCheck } from '@/assets/icons/IconCheck'
 import { XMenuItem } from '@/components-x/x-dropdown/XMenuItem'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { notifySuccess } from '@/helpers/processMessage'
 import { useUpdateGoalStatus } from '@/modules/goals/components/goal-editor-dialog/service/update-goal-status/useUpdateGoalStatus.service'
 import { isActiveRitualStatus, isCompletedGoalStatus } from '@/modules/goals/helpers/goalsGuards'
@@ -18,7 +18,7 @@ export const CompleteGoalMenuItem: React.FC<{ goal: IGoalSchema; onClose: () => 
     return (
         <>
             <XMenuItem>
-                <StyledButton
+                <XButton
                     variant={'contained'}
                     size={'small'}
                     onClick={() => {
@@ -36,7 +36,7 @@ export const CompleteGoalMenuItem: React.FC<{ goal: IGoalSchema; onClose: () => 
                     <span className='w-[120px] flex justify-start '>
                         <span>Complete</span>
                     </span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
         </>
     )

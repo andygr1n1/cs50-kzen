@@ -5,7 +5,7 @@ import { XMenuDropdown } from '@/components-x/x-dropdown/XMenuDropdown'
 import { XMenuItem } from '@/components-x/x-dropdown/XMenuItem'
 import { useState } from 'react'
 import { GoalsFiltersSelectButton } from './GoalsFiltersSelectButton'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useNavigate } from 'react-router-dom'
 import { setGoalsFilterParam } from '@/modules/goals/helpers/goalsFilterParamLocalForage'
 import { IconExpired } from '@/assets/icons/IconExpired'
@@ -54,91 +54,91 @@ const DropdownRender: React.FC<{ onClose: (filter: IGoalStatus) => void }> = obs
                     onClose('active')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconFocus className='text-blue-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-blue-500'>Active</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose('favorite')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconFavorite className='text-rose-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-rose-500'>Favorite</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose('ritual')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconRitual className='text-teal-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-teal-500'>Ritualized</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose('expired')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconExpired className='text-amber-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-amber-500'>Expired</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose('completed')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconCompleted className='text-violet-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-violet-500'>Completed</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose('deleted')
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconDeleteTemp className='text-slate-500' width={24} height={24} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-slate-500'>Deleted</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {
                     onClose(artifactStatus.all)
                 }}
             >
-                <StyledButton
+                <XButton
                     variant='text'
                     size='small'
                     startIcon={<IconAll className='text-sky-400' width={26} height={26} />}
                 >
                     <span className='flex w-[110px] justify-start capitalize text-sky-400'>All</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
         </XMenuDropdown>
     )

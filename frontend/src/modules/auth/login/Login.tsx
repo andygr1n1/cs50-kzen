@@ -2,7 +2,7 @@ import { Form, Formik } from 'formik'
 import { AuthPasswordInput } from '../shared-components/AuthPasswordInput'
 import { LoginFooter } from './components/LoginFooter'
 import { GoogleLogin } from '@/components/google-login/GoogleLogin'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useLoginOnSubmit } from './hooks/useLoginOnSubmit'
 import { useLoginOnValidate } from './hooks/useLoginOnValidate'
 import { type IUserLoginSchema } from './services/types'
@@ -21,9 +21,9 @@ const Login = () => {
                 <Form className='flex flex-col gap-5'>
                     <AuthEmailInput />
                     <AuthPasswordInput />
-                    <StyledButton className='w-full' type='submit'>
+                    <XButton className='w-full' type='submit'>
                         Login
-                    </StyledButton>
+                    </XButton>
                     <LoginFooter />
                 </Form>
             </Formik>

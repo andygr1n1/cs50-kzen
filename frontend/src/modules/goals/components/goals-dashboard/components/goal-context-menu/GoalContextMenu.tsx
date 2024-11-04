@@ -5,7 +5,7 @@ import { IconEye } from '@/assets/icons/IconEye'
 import { type IGoalSchema } from '@/modules/goals/shared-service/types'
 import { GoalIsFavorite } from '../../../../shared-components/goal-is-favorite/GoalIsFavorite'
 import { GoalDeletedAt } from '../../../../shared-components/goal-deleted-at/GoalDeletedAt'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { ToggleEditGoal } from '../../../../shared-components/ToggleEditGoal'
 import { CreateChildGoal } from '../../../../shared-components/CreateChildGoal'
 import { useGoalEditor$ } from '../../../goal-editor-dialog/stores/goal-editor-store/useGoalEditor.store'
@@ -40,9 +40,9 @@ export const GoalContextMenu: React.FC<{ goal: IGoalSchema; action: () => void; 
                     onClose()
                 }}
             >
-                <StyledButton variant='text' size='small' startIcon={<IconEye width={24} height={24} />}>
+                <XButton variant='text' size='small' startIcon={<IconEye width={24} height={24} />}>
                     <span className='flex w-[110px] justify-start capitalize'>open</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
             <XMenuItem
                 onClick={() => {

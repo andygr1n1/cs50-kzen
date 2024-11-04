@@ -1,5 +1,5 @@
 import { XTooltip } from '@/components-x/x-tooltip/XTooltip'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 // import { useMutateGoalDeletedAt } from '@/modules/goals/service'
 import { IconDeleteTemp } from '@/assets/icons/IconDeleteTemp'
 import { type ReactNode } from 'react'
@@ -15,7 +15,7 @@ export const GoalDeletedAt: React.FC<{ goalId: string; deletedAt: boolean; label
 
     return (
         <>
-            <StyledButton
+            <XButton
                 id='toggleMoveGoalToBin'
                 size={'small'}
                 error={!!deletedAt}
@@ -26,7 +26,7 @@ export const GoalDeletedAt: React.FC<{ goalId: string; deletedAt: boolean; label
                 startIcon={<IconDeleteTemp width={24} height={24} className='h-6 w-6 opacity-70 hover:opacity-100' />}
             >
                 {label}
-            </StyledButton>
+            </XButton>
             {!label && <XTooltip anchorSelect='#toggleMoveGoalToBin'>{deletedAt ? 'Restore' : 'Move to bin'}</XTooltip>}
         </>
     )

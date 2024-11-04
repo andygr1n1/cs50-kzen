@@ -1,5 +1,5 @@
 import { Formik, Form } from 'formik'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { AuthPasswordInput } from '../shared-components/AuthPasswordInput'
 import { type IUserNewPasswordSchema } from './services/types'
 import { useNewPasswordOnSubmit } from './hooks/useNewPasswordOnSubmit'
@@ -19,14 +19,14 @@ const NewPasswordIndex: React.FC = () => {
                     <Form className='flex flex-col gap-5'>
                         <AuthPasswordInput />
                         <AuthPasswordInput repeatType />
-                        <StyledButton
+                        <XButton
                             className='w-full'
                             type='submit'
                             disabled={isSubmitting}
                             startIcon={isSubmitting && <IconInfiniteLoading className='text-slate-500 w-5 h-5' />}
                         >
                             Restore
-                        </StyledButton>
+                        </XButton>
                     </Form>
                 )}
             </Formik>

@@ -4,7 +4,7 @@ import { type IUserRegisterSchema } from './services/types'
 import { AuthNameInput } from '../shared-components/AuthNameInput'
 import { AuthEmailInput } from '../shared-components/AuthEmailInput'
 import { AuthPasswordInput } from '../shared-components/AuthPasswordInput'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useRegisterOnSubmit } from './hooks/useRegisterOnSubmit'
 import { useRegisterOnValidate } from './hooks/useRegisterOnValidate'
 import { useRegisterInitialValues } from './hooks/useRegisterInitialValues'
@@ -24,14 +24,14 @@ const Register: React.FC = () => {
                         <AuthEmailInput />
                         <AuthPasswordInput />
                         <AuthPasswordInput repeatType />
-                        <StyledButton
+                        <XButton
                             className='w-full'
                             type='submit'
                             disabled={isSubmitting}
                             startIcon={isSubmitting && <IconInfiniteLoading className='text-slate-500 w-5 h-5' />}
                         >
                             {isSubmitting ? 'Registering...' : 'Register'}
-                        </StyledButton>
+                        </XButton>
                         <AlreadyHaveAccount />
                     </Form>
                 )}

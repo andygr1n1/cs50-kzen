@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { StyledButton } from '../buttons/StyledButton'
+import { XButton } from '../../components-x/x-button/XButton'
 import { XTooltip } from '@/components-x/x-tooltip/XTooltip'
 
 export const FormFooter: React.FC<{
@@ -21,7 +21,7 @@ export const FormFooter: React.FC<{
 }) => {
     return (
         <div className='mt-10 flex w-full items-center justify-center gap-6'>
-            <StyledButton error rounded onClick={onCancel} variant='outlined' size='extraLarge' className='!w-28'>
+            <XButton error rounded onClick={onCancel} variant='outlined' size='extraLarge' className='!w-28'>
                 <div className='flex items-center justify-center gap-2'>
                     {cancelTitle ? (
                         cancelTitle
@@ -31,10 +31,10 @@ export const FormFooter: React.FC<{
                         </>
                     )}
                 </div>
-            </StyledButton>
+            </XButton>
             {hideOkButton ? null : (
                 <div className='relative'>
-                    <StyledButton
+                    <XButton
                         rounded
                         disabled={disabled}
                         size='extraLarge'
@@ -42,7 +42,7 @@ export const FormFooter: React.FC<{
                         onClick={onOk}
                     >
                         {okTitle}
-                    </StyledButton>
+                    </XButton>
                     {disabled && disabledTooltip && (
                         <div
                             id='disabledTooltip'

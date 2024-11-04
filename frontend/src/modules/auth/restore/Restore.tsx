@@ -2,7 +2,7 @@ import { AlreadyHaveAccount } from '../shared-components/AlreadyHaveAccount'
 import { Formik, Form } from 'formik'
 import { type IUserRestoreSchema } from './services/types'
 import { AuthEmailInput } from '../shared-components/AuthEmailInput'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useRestoreOnSubmit } from './hooks/useRestoreOnSubmit'
 import { useRestoreOnValidate } from './hooks/useRestoreOnValidate'
 import { useRestoreInitialValues } from './hooks/useRestoreInitialValues'
@@ -19,14 +19,14 @@ const Register: React.FC = () => {
                 {({ isSubmitting }) => (
                     <Form className='flex flex-col gap-5'>
                         <AuthEmailInput />
-                        <StyledButton
+                        <XButton
                             className='w-full'
                             type='submit'
                             disabled={isSubmitting}
                             startIcon={isSubmitting && <IconInfiniteLoading className='text-slate-500 w-5 h-5' />}
                         >
                             Restore
-                        </StyledButton>
+                        </XButton>
                         <AlreadyHaveAccount />
                     </Form>
                 )}

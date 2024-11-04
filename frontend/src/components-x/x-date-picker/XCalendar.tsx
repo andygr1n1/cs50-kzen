@@ -1,7 +1,7 @@
 import { DayPicker, useNavigation } from 'react-day-picker'
 import type { XDatePickerProps } from './XDatePicker'
 import { type Dispatch, type SetStateAction, useEffect } from 'react'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { XTooltip } from '../x-tooltip/XTooltip'
 import clsx from 'clsx'
 import styles from './XCalendar.module.scss'
@@ -55,7 +55,7 @@ const DayPickerFooter: React.FC<IXCalendarProps> = (props) => {
 
     return (
         <div className='flex items-center justify-start gap-2'>
-            <StyledButton
+            <XButton
                 id='resetDate'
                 variant='text'
                 className='z-10'
@@ -71,7 +71,7 @@ const DayPickerFooter: React.FC<IXCalendarProps> = (props) => {
             <XTooltip anchorSelect='#resetDate'>Reset</XTooltip>
 
             {props.showToday && (
-                <StyledButton
+                <XButton
                     id='showToday'
                     variant='text'
                     onClick={() => {
@@ -80,7 +80,7 @@ const DayPickerFooter: React.FC<IXCalendarProps> = (props) => {
                     }}
                 >
                     Today
-                </StyledButton>
+                </XButton>
             )}
             <XTooltip anchorSelect='#showToday'>Navigate to current date</XTooltip>
         </div>

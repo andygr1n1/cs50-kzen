@@ -1,6 +1,6 @@
 import { IconEnterButton } from '@/assets/icons/IconEnterButton'
 import { IconShift } from '@/assets/icons/IconShift'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { extractTextFromHtml } from '@/helpers/extractTextFromHtml'
 import { useCurrentEditor } from '@tiptap/react'
 
@@ -20,7 +20,7 @@ export const SaveButton: React.FC<{
                     <IconShift /> + <IconEnterButton />
                 </div>
             )}
-            <StyledButton
+            <XButton
                 className='min-w-[80px]'
                 size='small'
                 onClick={(e) => {
@@ -29,7 +29,7 @@ export const SaveButton: React.FC<{
                 }}
             >
                 Save
-            </StyledButton>
+            </XButton>
         </div>
     )
 }

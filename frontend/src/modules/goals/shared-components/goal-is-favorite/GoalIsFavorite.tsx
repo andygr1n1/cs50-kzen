@@ -1,5 +1,5 @@
 import { XTooltip } from '@/components-x/x-tooltip/XTooltip'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { IconHeart } from '@/assets/icons/IconHeart'
 import { type ReactNode } from 'react'
 import { useUpdateGoalIsFavorite } from '@/modules/goals/shared-components/goal-is-favorite/hook/useUpdateGoalIsFavorite.hook'
@@ -14,7 +14,7 @@ export const GoalIsFavorite: React.FC<{ goalId: string; isFavorite: boolean; lab
 
     return (
         <>
-            <StyledButton
+            <XButton
                 id='toggleFavoriteGoal'
                 variant={isFavorite ? 'contained' : 'text'}
                 size={'small'}
@@ -23,7 +23,7 @@ export const GoalIsFavorite: React.FC<{ goalId: string; isFavorite: boolean; lab
                 className={cn(isFavorite && '!bg-pink-500')}
             >
                 {label}
-            </StyledButton>
+            </XButton>
             {!label && <XTooltip anchorSelect='#toggleFavoriteGoal'>{isFavorite ? 'Unfavorite' : 'Favorite'}</XTooltip>}
         </>
     )

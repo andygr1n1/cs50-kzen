@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { ActiveFilterIcon } from './ActiveFilterIcon'
 import { useGetGoalsParamsFilter } from '../../../shared-hooks/useGetGoalsParamsFilter'
 import { cn } from '@/helpers/cn'
@@ -7,7 +7,7 @@ import { cn } from '@/helpers/cn'
 export const GoalsFiltersSelectButton: React.FC = observer(() => {
     const { isExpired, isFavorite, isDeleted, isCompleted, isRitualized, isAll } = useGetGoalsParamsFilter()
     return (
-        <StyledButton
+        <XButton
             startIcon={<ActiveFilterIcon />}
             // onClick={ }
             className={cn(

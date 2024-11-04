@@ -1,7 +1,7 @@
 import React, { useRef, type ReactNode } from 'react'
 
 import { cn } from '@/helpers/cn'
-import './StyledButton.scss'
+import './XButton.scss'
 
 type StyledButtonType = 'contained' | 'outlined' | 'text'
 
@@ -29,7 +29,7 @@ type StyledButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
  * @param refLink -  ref to component
  * @param dataTest -  data-test tag
  */
-export const StyledButton = ({
+export const XButton = ({
     variant = 'contained',
     className = '',
     size = 'large',

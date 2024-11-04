@@ -1,7 +1,7 @@
 import { XModal } from '@/components-x/x-modal/XModal'
 import { useFormikContext } from 'formik'
 import { type IUpdateAvatarFormSchema } from '../../services'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { ImageCropper } from '@/components/image-cropper/ImageCropper'
 
 export const ProfileImageCropDialog = () => {
@@ -13,13 +13,13 @@ export const ProfileImageCropDialog = () => {
             {imgSrc && (
                 <div className='text-cText m-auto flex  flex-col bg-transparent'>
                     <ImageCropper imgPath={imgSrc} />
-                    <StyledButton
+                    <XButton
                         disabled={formikContext.isSubmitting}
                         className='w-full'
                         onClick={() => formikContext.handleSubmit()}
                     >
                         Save
-                    </StyledButton>
+                    </XButton>
                 </div>
             )}
         </XModal>

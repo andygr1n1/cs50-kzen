@@ -3,7 +3,7 @@ import { XDropdown } from '@/components-x/x-dropdown/XDropdown'
 import { XMenuDropdown } from '@/components-x/x-dropdown/XMenuDropdown'
 import { XMenuItem } from '@/components-x/x-dropdown/XMenuItem'
 import { type ReactNode } from 'react'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { useGoalEditor$ } from '@/modules/goals/components/goal-editor-dialog/stores/goal-editor-store/useGoalEditor.store'
 import { goalEditorMode } from '@/modules/goals/components/goal-editor-dialog/stores/goal-editor-store/types'
 import { IconNew } from '@/assets/icons/IconNew'
@@ -30,9 +30,9 @@ const DropdownRender = () => {
     return (
         <XMenuDropdown>
             <XMenuItem onClick={addGoal}>
-                <StyledButton variant='text' size='small' startIcon={<IconNew width={24} height={24} />}>
+                <XButton variant='text' size='small' startIcon={<IconNew width={24} height={24} />}>
                     <span className='flex w-[110px] justify-start capitalize'>Add goal</span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
         </XMenuDropdown>
     )

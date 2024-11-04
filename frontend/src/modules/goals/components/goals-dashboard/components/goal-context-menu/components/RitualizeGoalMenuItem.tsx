@@ -1,6 +1,6 @@
 import { IconInfinity } from '@/assets/icons/IconInfinity'
 import { XMenuItem } from '@/components-x/x-dropdown/XMenuItem'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 import { notifySuccess } from '@/helpers/processMessage'
 import { useRitualizeGoal } from '@/modules/goals/components/goal-editor-dialog/service/ritualize-goal/useRitualizeGoal'
 import { isActiveRitualStatus } from '@/modules/goals/helpers/goalsGuards'
@@ -24,7 +24,7 @@ export const RitualizeGoalMenuItem: React.FC<{ goal: IGoalSchema; onClose: () =>
     return (
         <>
             <XMenuItem>
-                <StyledButton
+                <XButton
                     variant={'contained'}
                     size={'small'}
                     onClick={() => {
@@ -42,7 +42,7 @@ export const RitualizeGoalMenuItem: React.FC<{ goal: IGoalSchema; onClose: () =>
                     <span className='w-[120px] flex justify-start'>
                         <span>Ritualize</span>
                     </span>
-                </StyledButton>
+                </XButton>
             </XMenuItem>
         </>
     )

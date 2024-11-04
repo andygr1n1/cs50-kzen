@@ -4,7 +4,7 @@ import { ProfileEmailInput } from '../../profile-details/components/ProfileEmail
 import { ProfilePasswordInput } from './ProfilePasswordInput'
 import { ProfileNewPasswordInput } from './ProfileNewPasswordInput'
 import { ProfileRepeatNewPasswordInput } from './ProfileRepeatNewPasswordInput'
-import { StyledButton } from '@/components/buttons/StyledButton'
+import { XButton } from '@/components-x/x-button/XButton'
 
 const ProfileNewPasswordForm: React.FC = observer(() => {
     return (
@@ -16,7 +16,7 @@ const ProfileNewPasswordForm: React.FC = observer(() => {
             <ProfileNewPasswordInput />
             <ProfileRepeatNewPasswordInput />
             <div className='flex justify-end w-full mt-5'>
-                <StyledButton type='submit'>Save</StyledButton>
+                <XButton type='submit'>Save</XButton>
             </div>
         </Form>
     )
