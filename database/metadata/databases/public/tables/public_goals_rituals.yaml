@@ -1,0 +1,40 @@
+table:
+  name: goals_rituals
+  schema: public
+insert_permissions:
+  - role: hero
+    permission:
+      check: {}
+      columns:
+        - created_at
+        - goal_id
+        - ritual_id
+        - ritual_interval
+        - ritual_power
+        - ritual_type
+    comment: ""
+select_permissions:
+  - role: hero
+    permission:
+      columns:
+        - created_at
+        - goal_id
+        - ritual_id
+        - ritual_interval
+        - ritual_power
+        - ritual_type
+      filter: {}
+    comment: ""
+update_permissions:
+  - role: hero
+    permission:
+      columns:
+        - created_at
+        - goal_id
+        - ritual_id
+        - ritual_interval
+        - ritual_power
+        - ritual_type
+      filter: {}
+      check: null
+    comment: ""

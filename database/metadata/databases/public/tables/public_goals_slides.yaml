@@ -1,0 +1,48 @@
+table:
+  name: goals_slides
+  schema: public
+insert_permissions:
+  - role: hero
+    permission:
+      check:
+        owner_id:
+          _eq: X-Hasura-User-Id
+      set:
+        owner_id: x-hasura-User-Id
+      columns:
+        - active
+        - img_path
+        - title
+    comment: ""
+select_permissions:
+  - role: hero
+    permission:
+      columns:
+        - active
+        - created_at
+        - deleted_at
+        - id
+        - img_path
+        - title
+        - updated_at
+      filter:
+        owner_id:
+          _eq: X-Hasura-User-Id
+    comment: ""
+update_permissions:
+  - role: hero
+    permission:
+      columns:
+        - active
+        - deleted_at
+        - img_path
+        - title
+      filter:
+        owner_id:
+          _eq: X-Hasura-User-Id
+      check:
+        owner_id:
+          _eq: X-Hasura-User-Id
+      set:
+        owner_id: x-hasura-User-Id
+    comment: ""

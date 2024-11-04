@@ -14,7 +14,7 @@ export const processError = (content: string, title?: string) => {
 export const notify = (message?: ReactNode, props?: { message: ReactNode }) =>
     toast(<div className='whitespace-normal flex w-full h-full items-center'>{props?.message || message}</div>, {
         id: !!message ? String(message) : String(props?.message),
-        icon: <IconExpired className='text-amber-500 w-6 h-6' />,
+        icon: <IconExpired className='text-amber-500 w-6 h-6 min-w-6 min-h-6' />,
     })
 
 export const notifySuccess = (message?: ReactNode, props?: { message: ReactNode }) =>

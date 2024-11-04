@@ -5,7 +5,7 @@ export const GoalsSlides = () => {
     const { goalsSlides } = useFetchGoalsSlides()
 
     return (
-        <div className='m-auto flex h-full w-[340px] flex-wrap gap-5 '>
+        <div className='m-auto my-10 flex h-full w-[340px] flex-wrap gap-5 '>
             {goalsSlides?.map((goalSlide) => <GoalSlide key={goalSlide.id} goalSlide={goalSlide} />)}
         </div>
     )

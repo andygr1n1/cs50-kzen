@@ -1,0 +1,3 @@
+table:
+  name: restore_codes
+  schema: public

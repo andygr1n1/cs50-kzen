@@ -1,3 +1,9 @@
 backend/node_modules
 backend/build
 backend/.env
+
+frontend/node_modules
+frontend/build 
+frontend/.env
+
+database/.config.yaml

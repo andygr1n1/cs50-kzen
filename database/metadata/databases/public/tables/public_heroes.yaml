@@ -1,0 +1,55 @@
+table:
+  name: heroes
+  schema: public
+array_relationships:
+  - name: goals_slides
+    using:
+      foreign_key_constraint_on:
+        column: owner_id
+        table:
+          name: goals_slides
+          schema: public
+  - name: tokens
+    using:
+      foreign_key_constraint_on:
+        column: hero_id
+        table:
+          name: heroes_tokens
+          schema: public
+select_permissions:
+  - role: hero
+    permission:
+      columns:
+        - avatar
+        - birthday
+        - coins
+        - created_at
+        - email
+        - id
+        - name
+        - password
+        - phone
+        - role
+        - updated_at
+      filter: {}
+    comment: ""
+update_permissions:
+  - role: hero
+    permission:
+      columns:
+        - avatar
+        - birthday
+        - coins
+        - email
+        - name
+        - password
+        - phone
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+      set:
+        id: x-hasura-User-Id
+    comment: ""

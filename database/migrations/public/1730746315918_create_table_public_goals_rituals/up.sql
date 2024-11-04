@@ -1,0 +1,2 @@
+CREATE TABLE "public"."goals_rituals" ("ritual_id" uuid NOT NULL DEFAULT gen_random_uuid(), "goal_id" uuid NOT NULL, "ritual_power" integer NOT NULL DEFAULT 0, "ritual_interval" integer NOT NULL DEFAULT 7, "ritual_type" text NOT NULL DEFAULT 'interval_in_days', "created_at" timestamptz NOT NULL DEFAULT now(), PRIMARY KEY ("ritual_id","goal_id") , FOREIGN KEY ("goal_id") REFERENCES "public"."goal"("id") ON UPDATE cascade ON DELETE cascade);
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
