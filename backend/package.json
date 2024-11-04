@@ -1,0 +1,79 @@
+{
+    "name": "nodejs-heroku-origin",
+    "version": "1.0.0",
+    "description": "nodejs-heroku-origin",
+    "main": "./build/src/index.js",
+    "scripts": {
+        "clean": "rimraf build",
+        "build": "yarn clean && npx esbuild src/index.ts --bundle --outfile=build/index.mjs --format=esm --platform=node --sourcemap --banner:js=\"const { require, __filename,__dirname } = await (async () => {\n\tconst { createRequire } = await import('node:module');\n\tconst { fileURLToPath } = await import('node:url');\n\treturn {\n\t\trequire: createRequire(import.meta.url),\n\t\t__filename: fileURLToPath(import.meta.url),\n\t\t__dirname: fileURLToPath(new URL('.', import.meta.url)),\n\t};\n})();\"",
+        "start": "node build/index.mjs",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "nodejs": "node index.mjs",
+        "watch": "tsx watch ./src/index.ts -e ejs,js,css,html,jpg,png,scss,ts",
+        "tsc": "tsc --noEmit",
+        "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
+        "lint:format": "npx eslint ./src --fix",
+        "prettier": "prettier --write ./src"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn run prettier && yarn run lint && git add -A ."
+        }
+    },
+    "keywords": [
+        "heroku",
+        "andygr1n1",
+        "nodejs-heroku-origin"
+    ],
+    "author": "andygr1n1",
+    "license": "ISC",
+    "type": "module",
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/cors": "^2.8.13",
+        "@types/express": "^4.17.14",
+        "@types/express-fileupload": "^1.4.1",
+        "@types/lodash": "^4.14.190",
+        "@types/node": "^20.12.2",
+        "@types/node-fetch": "2",
+        "@types/nodemailer": "^6.4.8",
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "esbuild": "^0.21.5",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-eslint-plugin": "^5.4.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-prettier": "^5.1.3",
+        "lodash": "^4.17.21",
+        "prettier": "^3.2.5",
+        "ts-node-dev": "^2.0.0",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "@types/cookie-parser": "^1.4.7",
+        "app-root-path": "^3.1.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "date-fns": "^2.30.0",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "express-fileupload": "^1.4.0",
+        "express-jwt": "^7.7.7",
+        "google-auth-library": "^9.10.0",
+        "graphql": "^16.6.0",
+        "graphql-request": "^6.0.0",
+        "install": "^0.13.0",
+        "jsonwebtoken": "^9.0.2",
+        "jwks-rsa": "^3.0.0",
+        "node-fetch": "2",
+        "nodemailer": "^6.9.3",
+        "tsx": "^4.7.1",
+        "zod": "^3.23.8"
+    }
+}
