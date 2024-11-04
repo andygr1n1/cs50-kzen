@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { APP_ROUTES_ENUM } from '../../../../services/enums'
+import { IntroIndex } from '@/modules/intro/IntroIndex'
 const LoginIndex = lazy(() => import('@/modules/auth/login/Login'))
 const RegisterIndex = lazy(() => import('@/modules/auth/register/Register'))
 const RestoreAccountIndex = lazy(() => import('@/modules/auth/restore/Restore'))
@@ -16,6 +17,7 @@ export const AnonymousRoutes: React.FC = () => {
             <div className={'authorization-page'}>
                 <LoginContainer>
                     <Routes>
+                        <Route path={`/${APP_ROUTES_ENUM.INTRO}`} element={<IntroIndex />} />
                         <Route path={`/${APP_ROUTES_ENUM.LOGIN}`} element={<LoginIndex />} />
                         <Route path={`/${APP_ROUTES_ENUM.REGISTER}/*`} element={<RegisterIndex />} />
                         <Route

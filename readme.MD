@@ -1,6 +1,6 @@
 # KZEN
 
-#### Video Demo: <URL HERE>
+#### Video Demo: https://youtu.be/NX3emwx0SDU
 
 ## KZEN: Revolutionizing Goal Setting and Tracking
 
@@ -91,5 +91,3 @@ cs50 course helped me to improve my skills in programming and to be a better dev
 #### Conclusion
 
 During development were used a lot of modern technologies and approaches. It was a great experience to work with them. The main focus was to make a full stack app that will have a extendable architecture, built on react and node.js. Typescript is a great tool for avoiding errors and making the code more robust.
-
-

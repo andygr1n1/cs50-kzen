@@ -18,6 +18,7 @@ export enum APP_ROUTES_ENUM {
     PROFILE = 'profile',
     GOALS = 'goals',
     DASHBOARD = 'dashboard',
+    INTRO = 'intro'
 }
 
 export enum SERVER_ROUTES {
