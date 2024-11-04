@@ -21,9 +21,7 @@ export default defineConfig(({ mode }) => {
         },
         plugins: [
             react({
-                babel: {
-                    presets: ['jotai/babel/preset'],
-                },
+                babel: {},
             }),
             NodeGlobalsPolyfillPlugin({
                 buffer: true,

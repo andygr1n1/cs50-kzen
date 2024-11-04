@@ -3,7 +3,7 @@ import type { IRoot$ } from './types'
 import { Root$ } from './stores/Root.store'
 const storeContext = createContext<IRoot$ | null>(null)
 
-const generateRoot$ = () => Root$.create({})
+const generateRoot$ = () => Root$.create({ isDarkTheme: localStorage.getItem('dark') === 'true' })
 
 export const root$ = generateRoot$()
 

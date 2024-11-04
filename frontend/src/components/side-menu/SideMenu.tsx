@@ -43,7 +43,7 @@ const SideMenu: React.FC = observer(() => {
                     useSideMenu.is_open ? 'animate-slide-in' : 'animate-slide-out lg:animate-opacity ml-[-320px] '
                 }
                 text-cText bg-global-2-bg font-kzen  absolute left-0 z-[120] flex h-full shadow-md shadow-black/20
-               lg:static  lg:m-0 lg:mr-0 lg:flex
+                lg:static  lg:m-0 lg:mr-0 lg:flex
             `}
             >
                 <div className='flex w-[230px] min-w-[230px] flex-col overflow-auto py-5'>

@@ -7,6 +7,7 @@ import { generateTSClient, generateURQLClient } from '@/graphql/client'
 
 export const Root$ = types
     .model('Root$', {
+        isDarkTheme: true,
         userId: '',
         role: types.maybe(types.enumeration(['hero', 'guest', 'super_hero', 'admin'])),
         initLoading: true,
@@ -22,6 +23,12 @@ export const Root$ = types
         },
     }))
     .actions((self) => ({
+        onChangeTheme() {
+            self.isDarkTheme = !self.isDarkTheme
+            const key = 'dark'
+            localStorage.setItem(key, self.isDarkTheme.toString())
+            document.querySelector('html')!.setAttribute(key, self.isDarkTheme.toString())
+        },
         selectUser: flow(function* selectUser({ user }: { user: { id?: string; role?: string } }) {
             self.userId = user.id || ''
             self.role = user.role
