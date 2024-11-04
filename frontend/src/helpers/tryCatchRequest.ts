@@ -1,5 +1,5 @@
 import { type TaskEither, tryCatch } from 'fp-ts/lib/TaskEither'
-import { pipe, type LazyArg } from 'fp-ts/lib/function'
+import { pipe } from 'fp-ts/lib/function'
 import { fold } from 'fp-ts/lib/Either'
 import { HTTPError } from 'ky'
 import { processError } from './processMessage'
@@ -27,16 +27,6 @@ export async function tryCatchRequest<A, B>(
             (success) => success, // Handle the right case (success)
         ),
     )
-}
-
-/**
- * @deprecated This function is deprecated and will be removed in future versions.
- * Use the tryCatchRequest() instead.
- */
-export async function resolveData<A, B>(success: LazyArg<Promise<B>>, error: (reason: unknown) => A) {
-    const data = await tryCatch<A, B>(success, error)()
-
-    return data._tag === 'Right' ? data['right'] : data['left']
 }
 
 export const resolveError = async (error?: unknown) => {
